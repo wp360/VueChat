@@ -1,0 +1,160 @@
+html, body, #app {
+    height: 100%;
+}
+section {
+    background: #eee;
+}
+#app {
+    position: relative;
+}
+a {
+    color: #000;
+}
+a:visited {
+    color: #000;
+}
+.outter,
+.sub-page {
+    height: 100%;
+    background: #eee;
+    .app-header,
+    #wx-header {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        font-size: 15px;
+        background: rgb(57, 58, 63);
+        .header-left {
+            float: left;
+            line-height: 40px;
+            .home-title {
+                margin-left: 10px;
+            }
+        }
+        .header-right {
+            float: right;
+            height: 40px;
+            line-height: 42px;
+            color: #fff;
+            div {
+                float: left;
+                margin: 0 20px 0 15px;
+                &.add {
+                    position: relative;
+                }
+            }
+            .iconfont {
+                font-size: 20px;
+            }
+        }
+        .iconfont {
+            color: #fff;
+        }
+        .icon-return-arrow {
+            font-size: 15px;
+            margin: 0 5px;
+            padding: 0 7px;
+            border-right: 1px solid #000;
+        }
+    }
+    .app-content {
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .app-footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 45px;
+        background: #eee;
+        z-index: 5;
+    }
+}
+.weui-cells {
+    width: 100%;
+}
+.weui-cell {
+    line-height: 1;
+    .weui-cell__bd {
+        float: left;
+    }
+    &:before {
+        right: 10px;
+        left: 10px;
+    }
+    .weui-switch {
+        width:40px;
+        height: 20px;
+    }
+    .weui-cell__ft {
+        font-size: 14px;
+    }
+    .weui-cells__title {
+        font-size: 13px;
+    }
+}
+.weui-switch-cp__box:before, .weui-switch:before {
+    width: 38px;
+    height: 18px;
+    background-color: #dfdfdf;
+}
+.weui-switch-cp__box:after, .weui-switch:after {
+    width: 18px;
+    height: 18px;
+}
+
+.sub-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    .app-content {
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto; 
+    }
+    .header-right {
+        margin-right: 10px;
+        font-size: 20px;
+    }
+}
+.outter {
+    z-index: 2;
+    .app-header {
+        z-index: 2;
+    }
+    .header-fixed {
+        position: fixed;
+    }
+    .content-fixed {
+        padding-top: 40px;
+    }
+}
+.outter.hideLeft {
+    opacity: 0.75;
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+    transition: .5s;
+}
+.sub-page {
+    #wx-header {
+        z-index: 3;
+    }
+} 
+.clearfix:after {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
